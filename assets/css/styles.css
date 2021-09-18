@@ -1,0 +1,502 @@
+ /***************
+           IMPORT FONT STYLES
+ ***************/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Shadows+Into+Light&display=swap');
+
+ /***************
+           DEFINE COLOR VARIABLES
+ ***************/
+:root{
+  --blue:#3882F6;
+  --c1:#fff;
+  --b1:#1F2937;
+  --hh:#f9faf8;
+  --ht:#e5e7eb;
+  --n1:#333;
+}
+
+
+ /***************
+           GENERAL STYLES BY DEFAULT 
+ ***************/
+*{
+  font-family: 'Nunito', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-decoration: none;
+  transition:all .2s linear;
+}
+
+*::selection{
+  background:var(--blue);
+  color:#fff;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+
+/***************
+           START BTN TO CALL ACTION  STYLES 
+***************/ 
+.btn{
+    display: inline-block;
+    padding:.8rem 3rem;
+    border:.2rem solid var(--blue);
+    color:var(--c1);
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: .8rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 1rem;
+  }
+  
+  .btn::before{
+    content: '';
+    position: absolute;
+    top:0; right: 0;
+    width:0%;
+    height:100%;
+    background:var(--blue);
+    transition: .3s linear;
+    z-index: -1;
+  }
+  
+  .btn:hover::before{
+    width:100%;
+    left: 0;
+  }
+  
+  .btn:hover{
+    color:#fff;
+  }
+ /***************
+           END BTN TO CALL ACTION  STYLES 
+ ***************/
+  
+/***************
+            START HEADER AND MENU SECTIONS TYLES 
+***************/
+  header{
+    position: fixed;
+    top:0; left: 0; right:0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:var(--b1);
+    padding:2rem 9%;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  }
+  
+  header .logo{
+    font-size: 24px;
+    font-weight: bolder;
+    color:var(--ht);
+    font-family: 'Shadows Into Light', cursive,Arial, Helvetica, sans-serif; 
+  }
+  
+  header .logo i{
+    padding-right: .5rem;
+    color:var(--blue);
+  }
+  
+  header .navbar a{
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    color:var(--ht);
+    font-family: 'Shadows Into Light', cursive,Arial, Helvetica, sans-serif;
+  }
+  
+  header .navbar a:hover{
+    color:var(--blue);
+  }
+  
+  #menu-bar{
+    font-size: 3rem;
+    cursor: pointer;
+    color:var(--hh);
+    border:.1rem solid var(--hh);
+    border-radius: .3rem;
+    padding:.5rem 1.5rem;
+    display: none;
+  }
+/***************
+            END HEADER AND MENU SECTIONS TYLES 
+***************/
+
+
+/*************** 
+            STYLES HERO SECTION
+***************/
+  .hero{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    min-height: 100vh;
+    align-items: center;
+    background: var(--b1);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .hero .content{
+    flex:1 1 40rem;
+    padding-top: 6.5rem;
+  }
+  
+  .hero .image{
+    flex:1 1 40rem;
+  }
+  
+  .hero .image img{
+    width:100%;
+    padding:1rem;
+    animation:float 3s linear infinite;
+    border-radius: 50%;
+    border: 2px solid #eee;
+  }
+  
+  @keyframes float{
+    0%, 100%{
+      transform: translateY(0rem);
+    }
+    50%{
+      transform: translateY(3rem);
+    }
+  }
+  
+  .hero .content h3{
+    font-size:48px;
+    font-weight:bolder;
+    color:var(--hh);
+    font-family: 'Shadows Into Light', cursive,Arial, Helvetica, sans-serif;
+  }
+  
+  .hero .content p{
+    font-size:18px;
+    color: var(--ht);
+    padding:1rem 0;
+  }
+/**************
+          END HERO STYLES
+***************/
+  
+
+
+/******************
+          STYLES HOW IT WORKS --- INFORMATION
+******************/
+  .step-container{
+    margin-top: 50px;
+  }
+
+
+/**************
+          PADDING TO SECTIONS
+***************/ 
+  section{
+    padding:2rem 9%;
+  }
+
+ 
+/**************
+          TITLE TEXT STYLES
+***************/ 
+  .heading{
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: 'Shadows Into Light', cursive,Arial, Helvetica, sans-serif;
+    padding:1rem;
+    color:#666;
+    width: 100%;
+  }
+
+  .heading span{
+    color:var(--blue);
+    font-family: 'Shadows Into Light', cursive,Arial, Helvetica, sans-serif;
+  }
+
+
+
+/**************
+          START SOME INFORMATION STYLES
+***************/  
+  .information{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    padding:1rem;
+  }
+  
+  .information .box{
+    flex:1 1 25rem;
+    padding:1rem;
+    text-align: center;
+  }
+  
+  .information .box img{
+    border-radius: 50%;
+    border:1rem solid #fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.3);
+    width: 200px;
+    height: 200px;
+  }
+
+  .information .box img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
+  .information .box h3{
+    font-size: 18px;
+    color:#333;
+    padding:1rem;
+  }
+/**************
+          END SOME INFORMATION STYLES
+***************/ 
+  
+
+
+/**************
+          START WHAT CUSTOMER SAYS STYLES
+***************/
+.review{
+    background: #eee;
+    margin-bottom: 50px; 
+    padding: 50px;
+  }
+
+  .review .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+  }
+  
+  .review .box-container .box{
+    text-align: center;
+    padding:2rem;
+    border:1rem solid #fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.3);
+    border-radius: .5rem;
+    flex:1 1 30rem;
+    background:var(--b1);
+    margin-top: 6rem;
+  }
+  
+  .review .box-container .box img{
+    height: 12rem;
+    width:12rem;
+    border-radius: 50%;
+    border:1rem solid #fff;
+    margin-top: -8rem;
+    object-fit: cover;
+  }
+  
+  .review .box-container .box h3{
+    font-size: 2.5rem;
+    color:var(--hh);
+    padding:.5rem 0;
+    font-family: 'Shadows Into Light', cursive,Arial, Helvetica, sans-serif;
+  }
+  
+  .review .box-container .box .stars i{
+    font-size: 2rem;
+    color:var(--ht);
+    padding:.5rem 0;
+  }
+  
+  .review .box-container .box p{
+    font-size: 1.5rem;
+    color:var(--ht);
+    padding:1rem 0;
+    text-align: justify;  
+  }
+/**************
+          END WHAT CUSTOMER SAYS STYLES
+***************/
+  
+
+
+/**************
+          START CALL TO ACTION(CTA) STYLES
+***************/
+.order{
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.order .row{
+    padding:2rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    background:var(--blue);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    border-radius: .9rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 80%;
+    margin: auto;
+}
+  
+.order .row .order_text{
+    flex:1 1 20rem;
+    padding:0.6rem;
+    font-size: 20px;
+    color: var(--hh);
+}
+  
+.order .row .order_text h1{
+  font-family: 'Shadows Into Light', cursive,Arial, Helvetica, sans-serif;
+  font-size: 40px;
+}
+
+
+.order .row button{
+    background:var(--blue);
+    border: 2px solid var(--ht);
+    color: var(--hh);
+  }
+    
+  
+.order .row button:hover{
+    background:var(--b1);
+    transform: scale(1.1);
+}
+/**************
+          END CALL TO ACTION(CTA) STYLES
+***************/
+
+  
+/**************
+          START FOOTER STYLES
+***************/
+.footer{
+    background:#000;
+    text-align: center;
+}
+  
+.footer .share{
+    display: flex;
+    gap:1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+  
+.footer .credit{
+    padding:1.5rem 0.5rem;
+    color:var(--hh);
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+  
+.footer .credit span{
+    color:var(--blue);
+}
+
+.footer .fa-github{
+  color: var(--hh);
+}
+/**************
+        END FOOTER STYLES
+***************/
+  
+/****************
+                MEDIA QUERIES STYLES  
+****************/
+@media(max-width:991px){
+
+  html{
+    font-size: 55%;
+  }
+
+  header{
+    padding:2rem;
+  }
+
+  section{
+    padding:2rem;
+  }
+
+}
+
+@media(max-width:768px){
+
+  #menu-bar{
+    display: initial;
+  }
+
+  header .navbar{
+    position: absolute;
+    top:100%; left: 0; right:0;
+    background: #f7f7f7;
+    border-top: .1rem solid rgba(0,0,0,.1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header .navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  header .navbar a{
+    margin: 1.5rem;
+    padding:1.5rem;
+    display: block;
+    border:.2rem solid rgba(0,0,0,.1);
+    border-left:.5rem solid var(--blue);
+    background:var(--c1);
+    color: var(--n1);
+  }
+
+  header .navbar a:hover{
+     background: #e1e1e1;
+  }
+
+}
+
+@media(max-width:450px){
+
+  html{
+    font-size: 50%;
+  }
+
+
+}
+/**************
+         ENDS MEDIA QUERIES STYLES
+***************/
+
+
+/**************
+        SCROLL STYLES
+**************/
+
+#scroll-top{
+    position: fixed;
+    top:-120%;
+    right:2rem;
+    padding:.5rem 1.5rem;
+    font-size: 4rem;
+    background:var(--blue);
+    color:var(--hh);
+    border-radius: .5rem;
+    transition: 1s linear;
+    z-index: 1000;
+}
+  
+#scroll-top.active{
+    top:calc(100% - 12rem)
+}
+
